@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amin Akhshi - Computational Scientist</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div class="cursor"></div>
@@ -16,24 +20,24 @@
     <!-- Navigation -->
     <header>
         <div class="container">
-            <nav>
+            <nav class="navbar navbar-expand-lg">
                 <div class="logo">
                     <a href="index.html">Amin<span>Akhshi</span></a>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Projects</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto nav-links">
+                        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                        <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link">Projects</a></li>
+                        <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -42,8 +46,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="text-content">
+            <div class="hero-content row">
+                <div class="text-content col-lg-6" data-aos="fade-right" data-aos-duration="1000">
                     <h1 class="animate-text">Hello, I'm <span>Amin Akhshi</span></h1>
                     <p class="animate-text delay-1">Computational Scientist</p>
                     <div class="hero-buttons animate-text delay-2">
@@ -56,7 +60,7 @@
                         <a href="https://orcid.org/0000-0002-6995-3884" target="_blank"><i class="fab fa-orcid"></i></a>
                     </div>
                 </div>
-                <div class="hero-image animate-fade-in">
+                <div class="hero-image col-lg-6 animate-fade-in" data-aos="fade-left" data-aos-duration="1000">
                     <div class="img-container">
                         <!-- Replace with your actual image -->
                         <div class="placeholder-image"></div>
@@ -79,16 +83,16 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>About Me</h2>
                 <p>Computational Scientist & Researcher</p>
             </div>
-            <div class="about-content">
-                <div class="about-image">
+            <div class="about-content row">
+                <div class="about-image col-lg-4" data-aos="fade-right" data-aos-delay="200">
                     <!-- Replace with your actual image -->
                     <div class="placeholder-image"></div>
                 </div>
-                <div class="about-text">
+                <div class="about-text col-lg-8" data-aos="fade-left" data-aos-delay="300">
                     <h3>Who am I?</h3>
                     <p>I am a computational scientist and researcher focused on applying mathematical models and machine learning techniques to complex systems, particularly in neuroscience. Currently pursuing my PhD in Computational Neuroscience at McGill University, I combine expertise in physics, data science, and deep learning to investigate neural synchronization mechanisms and develop innovative computational solutions.</p>
                     
@@ -96,20 +100,20 @@
                     <div class="skills">
                         <div class="skill">
                             <div class="skill-name">English</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="100%"></div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="skill-name">Farsi</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="100%"></div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="skill-name">French</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="50%"></div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
@@ -266,126 +270,425 @@
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>Skills & Expertise</h2>
                 <p>My Technical Capabilities</p>
             </div>
             
             <div class="skills-categories">
-                <div class="skill-category">
+                <!-- Computational Skills -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
                     <h3>Computational Skills</h3>
-                    <div class="tag-cloud">
-                        <span class="tag">Mathematical Modeling</span>
-                        <span class="tag">ODEs</span>
-                        <span class="tag">PDEs</span>
-                        <span class="tag">SDEs</span>
-                        <span class="tag">Regression</span>
-                        <span class="tag">Bootstrapping</span>
-                        <span class="tag">Confidence Intervals</span>
-                        <span class="tag">Signal Processing</span>
-                        <span class="tag">Bifurcation Analysis</span>
-                        <span class="tag">Time Series Analysis</span>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Mathematical Methods</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Mathematical Modeling</span>
+                            <span class="tag">ODEs</span>
+                            <span class="tag">PDEs</span>
+                            <span class="tag">SDEs</span>
+                            <span class="tag">Regression</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Statistical Methods</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Bootstrapping</span>
+                            <span class="tag">Confidence intervals</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Data Science</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Signal Processing</span>
+                            <span class="tag">Bifurcation Analysis</span>
+                            <span class="tag">Time Series Analysis</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="skill-category">
+                <!-- Programming Languages -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                     <h3>Programming Languages</h3>
-                    <div class="tag-cloud">
-                        <span class="tag highlight">Python</span>
-                        <span class="tag">C</span>
-                        <span class="tag">Java</span>
-                        <span class="tag">Fortran</span>
-                        <span class="tag">Julia</span>
-                        <span class="tag">R</span>
-                        <span class="tag">MATLAB</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">LaTeX</span>
-                        <span class="tag">Markdown</span>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Highly Experienced</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag highlight">Python</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Object-Oriented</h4>
+                            <span class="skill-rating">3.5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">C</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Fortran</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Numerical Analysis</h4>
+                            <span class="skill-rating">4.5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Julia</span>
+                            <span class="tag">R</span>
+                            <span class="tag">MATLAB</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Web Development</h4>
+                            <span class="skill-rating">4/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">PHP</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Other</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">SQL</span>
+                            <span class="tag">LaTeX</span>
+                            <span class="tag">Markdown</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="skill-category">
+                <!-- Data Science/ML Libraries -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                     <h3>Data Science/ML Libraries</h3>
-                    <div class="tag-cloud">
-                        <span class="tag">NumPy</span>
-                        <span class="tag">SciPy</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">BLAS</span>
-                        <span class="tag">FFTW</span>
-                        <span class="tag">Scikit-learn</span>
-                        <span class="tag">Shark</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">Pillow</span>
-                        <span class="tag">Pygame</span>
-                        <span class="tag">Statsmodels</span>
-                        <span class="tag">Matplotlib</span>
-                        <span class="tag">Plotly</span>
-                        <span class="tag">Seaborn</span>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Data Analysis</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">NumPy</span>
+                            <span class="tag">SciPy</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">BLAS</span>
+                            <span class="tag">FFTW</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Machine Learning</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Shark</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Computer Vision</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Pillow</span>
+                            <span class="tag">Pygame</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Data Visualization</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Plotly</span>
+                            <span class="tag">Seaborn</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="skill-category">
+                <!-- Deep Learning and AI -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
                     <h3>Deep Learning and AI</h3>
-                    <div class="tag-cloud">
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">torchvision</span>
-                        <span class="tag">Tensorflow</span>
-                        <span class="tag">Keras</span>
-                        <span class="tag">XGBoost</span>
-                        <span class="tag">LightGBM</span>
-                        <span class="tag">Quantization</span>
-                        <span class="tag">qKeras</span>
-                        <span class="tag">Optuna</span>
-                        <span class="tag">Hyperopt</span>
-                        <span class="tag">SHAP</span>
-                        <span class="tag">LIME</span>
-                        <span class="tag">JAX</span>
-                        <span class="tag">MXNet</span>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>PyTorch Ecosystem</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">torchvision</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>TensorFlow Ecosystem</h4>
+                            <span class="skill-rating">4.5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Tensorflow</span>
+                            <span class="tag">Keras</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Boosting Algorithms</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">LightGBM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Model Compression</h4>
+                            <span class="skill-rating">3.5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Quantization</span>
+                            <span class="tag">qKeras</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Hyperparameter Optimization</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Optuna</span>
+                            <span class="tag">Hyperopt</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Explainable AI</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">SHAP</span>
+                            <span class="tag">LIME</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Other Frameworks</h4>
+                            <span class="skill-rating">2/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">JAX</span>
+                            <span class="tag">MXNet</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="skill-category">
-                    <h3>Database & Web Development</h3>
-                    <div class="tag-cloud">
-                        <span class="tag">xarray</span>
-                        <span class="tag">Data Annotation</span>
-                        <span class="tag">Big Data</span>
-                        <span class="tag">Data Structure</span>
-                        <span class="tag">Apache Spark</span>
-                        <span class="tag">Django</span>
-                        <span class="tag">Flask</span>
-                        <span class="tag">FastAI</span>
+                <!-- Soft Skills & Misc -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Work Ethic</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Hard-working</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Management</h4>
+                            <span class="skill-rating">4/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Project management</span>
+                            <span class="tag">Leadership</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="skill-category">
+                <!-- Specialized Knowledge -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
                     <h3>Specialized Knowledge</h3>
-                    <div class="tag-cloud">
-                        <span class="tag">EEG</span>
-                        <span class="tag">ECG</span>
-                        <span class="tag">LFP</span>
-                        <span class="tag">fMRI</span>
-                        <span class="tag">Patch clamp</span>
-                        <span class="tag">Spectral flow cytometry</span>
-                        <span class="tag">scRNA-Seq</span>
-                        <span class="tag">Financial Series</span>
-                        <span class="tag">Power Grids</span>
-                        <span class="tag">Sound Signals</span>
-                        <span class="tag">Seismic data</span>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Neuroscience</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">EEG</span>
+                            <span class="tag">ECG</span>
+                            <span class="tag">LFP</span>
+                            <span class="tag">fMRI</span>
+                            <span class="tag">Patch clamp</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Bioinformatics</h4>
+                            <span class="skill-rating">4/5</span>
+                        </div>
+                        <div class="progress skill-progress"></div>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Spectral flow cytometry</span>
+                            <span class="tag">scRNA-Seq</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <h4>Other</h4>
+                            <span class="skill-rating">5/5</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <div class="tag-cloud">
+                            <span class="tag">Financial Series</span>
+                            <span class="tag">Power Grids</span>
+                            <span class="tag">Sound Signals</span>
+                            <span class="tag">Seismic data</span>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="certificates">
-                <h3>Professional Certificates</h3>
-                <div class="tag-cloud">
-                    <span class="tag certificate">IBM Data Science</span>
-                    <span class="tag certificate">IBM AI Engineering</span>
-                    <span class="tag certificate">AWS Cloud Solutions Architect</span>
+            <!-- Professional Certificates -->
+            <div class="certificates" data-aos="fade-up" data-aos-delay="700">
+                <h3><i class="fas fa-certificate"></i> Professional Certificates</h3>
+                <div class="certificate-grid">
+                    <div class="certificate-item">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h4>IBM Data Science</h4>
+                            <p>Comprehensive certification covering the complete data science workflow</p>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h4>IBM AI Engineering</h4>
+                            <p>Advanced AI and deep learning implementation techniques</p>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h4>AWS Cloud Solutions Architect</h4>
+                            <p>Design and implementation of cloud infrastructure solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3><i class="fas fa-certificate"></i> Additional Certifications</h3>
+                <div class="tag-cloud certificate-tags">
                     <span class="tag">Deep Neural Networks with PyTorch</span>
                     <span class="tag">Data Visualization with Python</span>
                     <span class="tag">Machine Learning with Python</span>
@@ -518,32 +821,155 @@
     <!-- Publications Section -->
     <section id="publications" class="publications">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>Publications</h2>
                 <p>Academic Research</p>
             </div>
             <div class="publications-content">
-                <h3><i class="fas fa-file-alt"></i> Journal Articles</h3>
+                <h3 data-aos="fade-up"><i class="fas fa-file-alt"></i> Journal Articles</h3>
                 <div class="publication-list">
-                    <div class="publication-item">
-                        <h4>Publication titles will appear here</h4>
-                        <p>Details of publications from your bibliography</p>
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Burst firing optimizes invariant coding of natural communication signals by electrosensory neural populations</h4>
+                        <p class="authors">Metzen*, M. G., Akhshi*, A., Bashivan, P., Khadra, A., & Chacron, M. J. (2024)</p>
+                        <p class="journal"><em>eLife</em> (*co-first author, Under Review)</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Understanding how differences in morphology, intrinsic properties, and extrinsic synaptic input shape spiking activity in sensory neural populations in vivo</h4>
+                        <p class="authors">Akhshi, A., Haggard, M., Marquez, M. M., Farjami, S., Chacron, M. J., & Khadra, A. (2024)</p>
+                        <p class="journal"><em>iScience</em> (Under Review)</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Revealing higher-order interactions in high-dimensional complex systems: A data-driven approach</h4>
+                        <p class="authors">Tabar, M. R. R., Nikakhtar*, F., Parkavousi*, L., Akhshi*, A., Feudel, U., & Lehnertz, K. (2024)</p>
+                        <p class="journal"><em>Physical Review X</em>, 14(1), 011050 (*equal contribution)</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>What did the T cell see? A deep-learning model of CD8+ T cell activation reveals sharp antigen discrimination at the single cell level</h4>
+                        <p class="authors">Wahlsten*, M., Akhshi*, A., Achar, S., Krishnan, A. Y., François, P., & Altan-Bonnet, G. (2023)</p>
+                        <p class="journal"><em>The Journal of Immunology</em>, 210, 226-07 (*equal contribution)</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>A Data-Driven Approach for Extraction of Event-Waveform: Application to Gravitational Waves</h4>
+                        <p class="authors">Akhshi, A., Alimohammadi, H., Baghram, S., Rahvar, S., Rahimi Tabar, M. R., & Arfaei, H. (2021)</p>
+                        <p class="journal"><em>Scientific Reports</em>, 11(1), 1-15</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Traceability and dynamical resistance of precursors of extreme events</h4>
+                        <p class="authors">Rings, T., Mazarei, M., Akhshi, A., Geier, C., Rahimi Tabar, M. R., & Lehnertz, K. (2019)</p>
+                        <p class="journal"><em>Scientific Reports</em>, 9(1), 1744</p>
                     </div>
                 </div>
                 
-                <h3><i class="fas fa-users"></i> Talks</h3>
+                <h3 data-aos="fade-up"><i class="fas fa-users"></i> Talks</h3>
                 <div class="publication-list">
-                    <div class="publication-item">
-                        <h4>Talk titles will appear here</h4>
-                        <p>Details of talks from your bibliography</p>
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Burst firing generates invariant coding of natural electrocommunication stimuli</h4>
+                        <p class="conference">International Congress of Neuroethology (ICN2024) - Berlin, Germany, July 28-Aug 2, 2024</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Exploring the neural basis of optimized invariant coding dynamics within sensory systems</h4>
+                        <p class="conference">Physiology 30th Annual Graduate Research Day - Montreal, Canada, May 10, 2024</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Machine Learning Applications in Neuroscience and Biology</h4>
+                        <p class="conference">Centre for Applied Mathematics in Bioscience and Medicine (CAMBAM) workshop series - Montreal, Canada, June 28, 2023</p>
+                        <p class="note">Workshop Organizer and Instructor</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Exploring sources of neural heterogeneity in vivo using an optimization workflow</h4>
+                        <p class="conference">International Workshop on Neurodynamics (NDy23) - Castro Urdiales, Cantabria, Spain, June 14-17, 2023</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Chasing a Ghost: The role of Ca<sup>2+</sup> mobilization on burst oscillation in pyramidal cell</h4>
+                        <p class="conference">SIAM Conference on the Life Sciences (LS22) - Pittsburgh, Pennsylvania, USA, July 11-14, 2022</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Spike sorting algorithms: A crash course on pre-processing and data curation techniques</h4>
+                        <p class="conference">Computational Biology Seminars, Institute of Biophysics and Biochemistry, University of Tehran - Tehran, Iran, January 22, 2022</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Annihilation process in Hodgkin–Huxley model</h4>
+                        <p class="conference">2021 Summer School in Nonlinear Dynamics, NSERC-CREATE in Complex Dynamics, McGill University - Montreal, Canada, May 31-June 11, 2021</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>EEG-fMRI Measures of Functional Brain Connectivity in Epileptic Seizure</h4>
+                        <p class="conference">Complex Systems Seminars, Department of Physics, Sharif University of Technology - Tehran, Iran, May 10, 2016</p>
                     </div>
                 </div>
                 
-                <h3><i class="fas fa-sticky-note"></i> Conference Proceedings</h3>
+                <h3 data-aos="fade-up"><i class="fas fa-sticky-note"></i> Conference Proceedings</h3>
                 <div class="publication-list">
-                    <div class="publication-item">
-                        <h4>Conference proceeding titles will appear here</h4>
-                        <p>Details of proceedings from your bibliography</p>
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Decoding extrinsic and intrinsic sources mediating spiking heterogeneities in vivo</h4>
+                        <p class="authors">Akhshi, A., Haggard, M., Marquez, M., Chacron, M. G., & Khadra, A.</p>
+                        <p class="conference">16th Canadian Neuroscience Meeting (CAN-ACN) - Montreal, Canada, May 28-31, 2023</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Understanding the Contributions of Extrinsic and Intrinsic Factors towards Spiking Heterogeneities in vivo</h4>
+                        <p class="authors">Akhshi, A., Chacron, M. G., & Khadra, A.</p>
+                        <p class="conference">Physiology 28th Annual Graduate Research Day - Montreal, Canada, May 19, 2023</p>
+                        <p class="award"><i class="fas fa-trophy"></i> Best Poster Award</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Investigating the Role of Intrinsic and Extrinsic Factors in Neuronal Heterogeneity: A Computational Study on Sensory Pyramidal Cells</h4>
+                        <p class="authors">Akhshi, A., Chacron, M. G., & Khadra, A.</p>
+                        <p class="conference">HBHL Symposium 2023 - Montreal, Canada, May 4-5, 2023</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Deep learning a model of cytotoxic T cell activation in the tumor microenvironment</h4>
+                        <p class="authors">Akhshi*, A., Wahlsten*, M., Achar, S., Krishnan, A., François, P., & Altan-Bonnet, G. (*equal contribution)</p>
+                        <p class="conference">21st International Conference on Systems Biology (ICSB 2022) - Berlin, Germany, October 8-12, 2022</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Investigating mechanisms of heterogeneities in sensory neural responses</h4>
+                        <p class="authors">Akhshi, A., Chacron, M. G., & Khadra, A.</p>
+                        <p class="conference">2022 Symposium in Nonlinear Dynamics in Brain and Behavior - Montreal, Canada, August 9-10, 2022</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Understanding sources of heterogeneity across a sensory neural population</h4>
+                        <p class="authors">Akhshi, A., Chacron, M. G., & Khadra, A.</p>
+                        <p class="conference">Physiology 27th Annual Graduate Research Day - Montreal, Canada, May 13, 2022</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Investigating the mechanisms underlying synchronization in sensory neural populations during burst firing</h4>
+                        <p class="authors">Akhshi, A., Khadra, A., & Chacron, M. G.</p>
+                        <p class="conference">2021 Symposium in Nonlinear Dynamics in Brain and Behavior - Montreal, Canada, August 9-10, 2021</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>A Multiple Clustering–based system for Identification of Seizure Attack in ECOG Time Series Signals</h4>
+                        <p class="authors">Akhshi, A.</p>
+                        <p class="conference">Computational Neuroscience and Brain Engineering Conference - Tehran, Iran, January 31-February 2, 2018</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>Complex dynamics of Epileptic Brain and Turbulence: From time series to Information flow</h4>
+                        <p class="authors">Akhshi, A.</p>
+                        <p class="conference">10th Conference on Statistical Physics, Soft Condensed Matter and Complex Systems - Tehran, Iran, April 25-26, 2018</p>
+                    </div>
+                    
+                    <div class="publication-item" data-aos="fade-up">
+                        <h4>EEG-fMRI Measures of Functional Brain Connectivity in Epileptic Seizure</h4>
+                        <p class="authors">Akhshi, A.</p>
+                        <p class="conference">2nd International Neuroinflammation Congress - Tehran, Iran, April 17-19, 2016</p>
                     </div>
                 </div>
             </div>
@@ -553,28 +979,19 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>Contact Me</h2>
                 <p>Get in touch</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
+            <div class="contact-content row">
+                <div class="contact-info col-lg-5" data-aos="fade-right" data-aos-delay="200">
                     <div class="contact-item">
                         <div class="icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="text">
                             <h3>Email</h3>
-                            <p>amin.akhshi@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Phone</h3>
-                            <p>+1 (438)-874-5773</p>
+                            <p>amin.akhshi@mail.mcgill.ca</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -593,19 +1010,19 @@
                         <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="contact-form">
+                <div class="contact-form col-lg-7" data-aos="fade-left" data-aos-delay="300">
                     <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <div class="form-group mb-3">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <div class="form-group mb-3">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
                         </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <div class="form-group mb-3">
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        <div class="form-group mb-3">
+                            <textarea id="message" name="message" class="form-control" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn primary-btn">Send Message</button>
                     </form>
@@ -615,7 +1032,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="logo">
@@ -638,6 +1055,15 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Particles JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
 </html>
