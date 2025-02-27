@@ -5,7 +5,7 @@ from scholarly import scholarly
 from bs4 import BeautifulSoup
 
 # Your Google Scholar ID - replace with your actual ID
-SCHOLAR_ID = "XuuYEyAAAAAJ&hl=en"
+SCHOLAR_ID = "XuuYEyAAAAAJ"
 
 def get_publications():
     """Fetch publications from Google Scholar"""
