@@ -1,0 +1,25 @@
+my-personal-website/
+├── content/
+│   └── _index.md
+├── layouts/
+│   ├── _default/
+│   │   └── baseof.html
+│   ├── index.html
+│   └── partials/
+│       ├── header.html
+│       ├── hero.html
+│       ├── about.html
+│       ├── experience.html
+│       ├── education.html
+│       ├── skills.html
+│       ├── services.html
+│       ├── portfolio.html
+│       ├── publications.html
+│       ├── contact.html
+│       └── footer.html
+├── static/
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── script.js
+

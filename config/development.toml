@@ -1,0 +1,8 @@
+# Development-specific settings
+baseURL = "http://localhost:1313/"
+title = "Amin Akhshi - Development"
+enableGitInfo = true
+
+[params]
+  env = "development"
+  debugMode = true
