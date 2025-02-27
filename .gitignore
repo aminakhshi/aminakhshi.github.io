@@ -22,4 +22,4 @@ Thumbs.db
 start.sh
 structure.txt
 config/development.toml
-
+check-hugo-setup.sh
