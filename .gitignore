@@ -1,2 +1,6 @@
 # Hugo lock file
 .hugo_build.lock
+start.sh
+structure.txt
+config/development.toml
+
