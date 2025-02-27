@@ -1,7 +1,5 @@
 # Hugo related
 .hugo_build.lock
-public/
-resources/
 
 # OS generated files
 .DS_Store
