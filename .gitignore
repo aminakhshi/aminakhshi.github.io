@@ -1,5 +1,24 @@
-# Hugo lock file
+# Hugo related
 .hugo_build.lock
+public/
+resources/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore the development config file
 start.sh
 structure.txt
 config/development.toml
