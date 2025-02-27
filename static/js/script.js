@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS animations
     AOS.init({
@@ -19,20 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initialize particles.js for background effect
-    if (document.getElementById('home')) {
-        particlesJS("home", {
+    // Function to get particles configuration based on theme
+    const getParticlesConfig = () => {
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        
+        return {
             particles: {
                 number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#ffffff" },
+                color: { value: isDarkMode ? "#ffffff" : "#000000" },
                 shape: { type: "circle" },
-                opacity: { value: 0.5, random: false },
+                opacity: { value: isDarkMode ? 0.5 : 0.3, random: false },
                 size: { value: 3, random: true },
                 line_linked: {
                     enable: true,
                     distance: 150,
-                    color: "#ffffff",
-                    opacity: 0.4,
+                    color: isDarkMode ? "#ffffff" : "#000000",
+                    opacity: isDarkMode ? 0.4 : 0.2,
                     width: 1
                 },
                 move: {
@@ -52,8 +53,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             retina_detect: true
-        });
-    }
+        };
+    };
+
+    // Initialize particles.js for background effect with theme-aware configuration
+    const initParticles = () => {
+        if (document.getElementById('home')) {
+            // Clear any existing particles instance first
+            if (window.pJSDom && window.pJSDom.length > 0) {
+                // This destroys all existing particles.js instances
+                window.pJSDom.forEach(dom => dom.pJS.fn.vendors.destroypJS());
+                window.pJSDom = [];
+            }
+            
+            // Initialize with current theme configuration
+            particlesJS("home", getParticlesConfig());
+        }
+    };
+
+    // Initial particles setup
+    initParticles();
 
     // Custom cursor
     const cursor = document.querySelector('.cursor');
@@ -268,6 +287,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     toggleButton.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
                 }
+                
+                // Reinitialize particles with new theme colors
+                initParticles();
             });
         }
     };
