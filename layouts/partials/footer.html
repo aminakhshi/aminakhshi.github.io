@@ -1,15 +1,18 @@
 <footer class="footer">
     <div class="container">
-        <div class="footer-content">
-            <div class="logo">
-                <a href="{{ .Site.BaseURL }}">Amin<span>Akhshi</span></a>
-            </div>
-            <p>© {{ now.Format "2006" }} {{ .Site.Params.author }}. All rights reserved.</p>
-            <div class="footer-links">
-                {{ range .Site.Menus.main }}
-                <a href="{{ .URL }}">{{ .Name }}</a>
-                {{ end }}
-            </div>
+      <div class="footer-content">
+        <div class="logo">
+          <a href="{{ "/" | relURL }}">Amin<span>Akhshi</span></a>
         </div>
+        <p>© 2025 Amin Akhshi. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </div>
-</footer>
+  </footer>
+  

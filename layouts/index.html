@@ -1,10 +1,18 @@
 {{ define "main" }}
-    {{ partial "hero.html" . }}
-    {{ partial "about.html" . }}
-    {{ partial "experience.html" . }}
-    {{ partial "education.html" . }}
-    {{ partial "skills.html" . }}
-    {{ partial "portfolio.html" . }}
-    {{ partial "publications.html" . }}
-    {{ partial "contact.html" . }}
+  {{ partial "header.html" . }}
+  {{ partial "hero.html" . }}
+  {{ partial "about.html" . }}
+  {{ partial "experience.html" . }}
+  {{ partial "education.html" . }}
+  {{ partial "skills.html" . }}
+  {{ partial "services.html" . }}
+  {{ partial "portfolio.html" . }}
+  {{ partial "publications.html" . }}
+  {{ partial "contact.html" . }}
+  {{ partial "footer.html" . }}
+  
+  <!-- Back to top button -->
+  <a href="#home" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+  </a>
 {{ end }}
