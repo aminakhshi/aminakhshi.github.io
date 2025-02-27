@@ -1,7 +1,0 @@
-baseURL = "https://aminakhshi.github.io/"
-title = "Amin Akhshi"
-enableGitInfo = true
-
-[params]
-  env = "production"
-  debugMode = false

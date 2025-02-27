@@ -28,7 +28,7 @@ jobs:
         
     - name: Build
       run: |
-        hugo --config config/config.toml --minify --verbose
+        hugo --config config.toml --minify --verbose
         
     - name: Debug - Check generated files
       run: |
