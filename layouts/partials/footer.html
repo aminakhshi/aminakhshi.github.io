@@ -1,0 +1,15 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="logo">
+                <a href="{{ .Site.BaseURL }}">Amin<span>Akhshi</span></a>
+            </div>
+            <p>© {{ now.Format "2006" }} {{ .Site.Params.author }}. All rights reserved.</p>
+            <div class="footer-links">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</footer>

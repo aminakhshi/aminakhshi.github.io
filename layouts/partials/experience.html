@@ -1,0 +1,26 @@
+<section id="experience" class="experience">
+    <div class="container">
+        <div class="section-header">
+            <h2>Work Experience</h2>
+            <p>My Professional Journey</p>
+        </div>
+        <div class="timeline">
+            {{ range $.Site.Data.experience }}
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>{{ .period }}</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>{{ .position }} | {{ .company }}</h3>
+                    <h4>{{ .location }}</h4>
+                    <ul>
+                        {{ range .responsibilities }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

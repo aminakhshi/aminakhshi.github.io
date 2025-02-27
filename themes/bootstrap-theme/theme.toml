@@ -1,0 +1,11 @@
+name = "Bootstrap Theme"
+license = "MIT"
+licenselink = ""
+description = "Personal website of Amin Akhshi"
+homepage = "https://aminakhshi.github.io/"
+tags = ["computational science", "data Scientist", "responsive", "bootstrap"]
+features = ["responsive", "bootstrap"]
+min_version = "0.41.0"
+
+[author]
+  name = "Amin Akhshi"

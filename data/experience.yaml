@@ -1,0 +1,50 @@
+- position: Research Intern
+  company: Immunodynamics Lab
+  location: Center for Cancer Research, National Institute of Health - Bethesda, MD, USA
+  period: April 2022 - May 2023
+  responsibilities:
+    - Used deep neural networks and nonlinear dynamics modeling to study T-cell activation in the tumor micro-environment
+    - Employed information theory measures to quantify the information content of T-cell signaling pathways
+    - Conducted feature importance analysis to examine the impact of micro-environmental factors on T-cell activation
+
+- position: Student Intern
+  company: Science and Sustainability
+  location: Google DeepMind - Montreal, QC, CA
+  period: Sept 2021 - Feb 2022
+  responsibilities:
+    - Developed and deployed recurrent neural network models for physiological data patterns
+    - Evaluated NLP models for understanding user preferences and personalized routine recommendations
+    - Implemented interactive dashboards and visualization tools for biosensor data
+
+- position: Intern
+  company: R&D
+  location: Aerial Technologies Inc. - Montreal, QC, CA
+  period: April 2021 - Sept 2021
+  responsibilities:
+    - Developed motion detection algorithms for tracking human activity using Wi-Fi signals
+    - Extracted features from Wi-Fi signals using machine learning for spatial-temporal movement identification
+    - Implemented LSTM and CNN models for indoor localization tracking
+
+- position: Research Assistant
+  company: Complex Systems Group
+  location: Sharif University of Technology - Tehran, IR
+  period: Sept 2019 - Aug 2020
+  responsibilities:
+    - Developed noise reduction algorithms for event extraction in noisy multivariate timeseries signals
+    - Utilized time-series analysis to identify high-dimensional interactions in large-scale complex systems
+
+- position: Application Scientist
+  company: AriaFan Varzan Co.
+  location: Tehran, IR
+  period: April 2016 - Sept 2018
+  responsibilities:
+    - Provided technical support and consulting for industrial and academic customers
+    - Assisted with laboratory work and technical issues with equipment
+
+- position: JavaScript Developer
+  company: Parax Co.
+  location: Tehran, IR
+  period: Nov 2011 - June 2013
+  responsibilities:
+    - Supervised JavaScript programmers team throughout the development lifecycle
+    - Led projects from conceptual model through detailed design to implementation and deployment

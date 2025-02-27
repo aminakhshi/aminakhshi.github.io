@@ -1,0 +1,22 @@
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="logo">
+                <a href="{{ .Site.BaseURL }}">Amin<span>Akhshi</span></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                    <li class="nav-item">
+                        <a href="{{ .URL }}" class="nav-link{{ if eq $currentPage.URL .URL }} active{{ end }}">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
