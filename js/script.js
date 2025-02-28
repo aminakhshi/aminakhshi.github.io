@@ -6,15 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
         mirror: true
     });
 
-    // Initialize typed.js for hero section typewriter effect
+    // Initialize typed.js for hero section typewriter effect - modified to type once and stop
     if (document.querySelector('.animate-text')) {
         new Typed('.animate-text span', {
-            strings: ['Amin Akhshi', 'a Computational Scientist', 'a Neural Data Analyst', 'a Machine Learning Expert'],
+            strings: ['Amin Akhshi'],
             typeSpeed: 70,
-            backSpeed: 40,
-            backDelay: 1500,
             startDelay: 500,
-            loop: true
+            showCursor: true,
+            cursorChar: '',
+            loop: false
         });
     }
 
@@ -295,6 +295,45 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     addThemeToggler();
+
+    // Timeline animation with Intersection Observer - improved implementation
+    function initTimelineAnimation() {
+        const timelineItems = document.querySelectorAll(".timeline ol li");
+        
+        if (timelineItems.length === 0) {
+            console.log("Timeline items not found - check your selectors");
+            return;
+        }
+        
+        console.log(`Found ${timelineItems.length} timeline items to animate`);
+        
+        // Check for IntersectionObserver support
+        if (!('IntersectionObserver' in window)) {
+            console.log("IntersectionObserver not supported, applying animation immediately");
+            timelineItems.forEach(item => item.classList.add("in-view"));
+            return;
+        }
+
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("in-view");
+                    console.log("Timeline item in view:", entry.target);
+                    timelineObserver.unobserve(entry.target);
+                }
+            });
+        }, { 
+            threshold: 0.2,
+            rootMargin: "0px 0px -100px 0px" 
+        });
+        
+        timelineItems.forEach(item => {
+            timelineObserver.observe(item);
+        });
+    }
+
+    // Run timeline initialization after a short delay to ensure DOM is fully ready
+    setTimeout(initTimelineAnimation, 500);
 });
 
 // Circle Rating System

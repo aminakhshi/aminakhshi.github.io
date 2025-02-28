@@ -1117,7 +1117,7 @@ body.dark-mode .hero {
 
 .rating.meh {
     background: var(--rating-color-meh);
-    color: var(--rating-color-meh);
+    color: var (--rating-color-meh);
 }
 
 .rating.bad {
@@ -1141,4 +1141,330 @@ body.dark-mode .hero {
 /* Hide original text rating when circular rating is shown */
 .skill-rating {
     margin-right: 10px;
+}
+
+/* Timeline Styles */
+.timeline {
+    padding: 50px 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.timeline ol {
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.timeline ol::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 3px;
+    height: 100%;
+    background: var(--primary-color);
+    opacity: 0.6;
+}
+
+.timeline ol li {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.timeline ol li .item-inner {
+    padding: 0 0 0 100px;
+    position: relative;
+}
+
+.timeline ol li .time-wrapper {
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.timeline ol li .time-wrapper::before,
+.timeline ol li .time-wrapper::after {
+    content: "";
+    position: absolute;
+    background: var(--primary-color);
+}
+
+.timeline ol li .time-wrapper::before {
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 3px;
+    transition: width 0.8s linear;
+}
+
+.timeline ol li .time-wrapper::after {
+    top: 50%;
+    left: -60px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translateY(-50%) scale(0);
+    transform-origin: center;
+    transition: all 0.4s ease;
+    background-color: var(--bg-color);
+    border: 3px solid var(--primary-color);
+}
+
+.timeline ol li time,
+.timeline ol li .details > * {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.timeline ol li time {
+    display: inline-block;
+    transform: translateY(-20px);
+}
+
+.timeline ol li .details > * {
+    transform: translateY(20px);
+}
+
+.timeline ol li .details h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.timeline ol li .details h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+/* Added styles to reduce spacing between list items */
+.timeline ol li .details ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.timeline ol li .details ul li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Animation styles */
+.timeline ol li.in-view .time-wrapper::before {
+    width: 40px;
+}
+
+.timeline ol li.in-view .time-wrapper::after {
+    transition-delay: 0.8s;
+    transform: translateY(-50%) scale(1);
+}
+
+.timeline ol li.in-view time,
+.timeline ol li.in-view .details > * {
+    opacity: 1;
+    transform: none;
+}
+
+.timeline ol li.in-view time {
+    transition-delay: 1s;
+}
+
+.timeline ol li.in-view .details h3 {
+    transition-delay: 1.2s;
+}
+
+.timeline ol li.in-view .details h4 {
+    transition-delay: 1.3s;
+}
+
+.timeline ol li.in-view .details ul {
+    transition-delay: 1.4s;
+}
+
+@media (max-width: 768px) {
+    .timeline ol::before {
+        left: 30px;
+    }
+    
+    .timeline ol li .item-inner {
+        padding-left: 70px;
+    }
+    
+    .timeline ol li .time-wrapper::before {
+        display: none;
+    }
+    
+    .timeline ol li .time-wrapper::after {
+        left: -40px;
+    }
+}
+
+/* Timeline Styles - Enhanced with more specificity */
+.experience .timeline {
+    padding: 50px 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.experience .timeline ol {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Reset margin */
+}
+
+.experience .timeline ol::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 3px;
+    height: 100%;
+    background: var(--primary-color);
+    opacity: 0.6;
+    z-index: 1; /* Ensure the line is visible */
+}
+
+.experience .timeline ol li {
+    position: relative;
+    margin-bottom: 60px;
+    opacity: 1; /* Ensure base visibility */
+}
+
+.experience .timeline ol li .item-inner {
+    padding: 0 0 0 100px;
+    position: relative;
+}
+
+.experience .timeline ol li .time-wrapper {
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px; /* Add spacing */
+}
+
+.experience .timeline ol li .time-wrapper::before,
+.experience .timeline ol li .time-wrapper::after {
+    content: "";
+    position: absolute;
+    background: var(--primary-color);
+}
+
+.experience .timeline ol li .time-wrapper::before {
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    width: 0; /* Start with 0 width */
+    height: 3px;
+    transition: width 0.8s linear;
+    z-index: 2; /* Above the timeline line */
+}
+
+.experience .timeline ol li .time-wrapper::after {
+    top: 50%;
+    left: -60px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translateY(-50%) scale(0); /* Start scaled down */
+    transform-origin: center;
+    transition: transform 0.4s ease;
+    background-color: var(--bg-color);
+    border: 3px solid var(--primary-color);
+    z-index: 3; /* Above everything */
+}
+
+/* Hide initially to animate in */
+.experience .timeline ol li time,
+.experience .timeline ol li .details > * {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.experience .timeline ol li time {
+    display: inline-block;
+    transform: translateY(-20px);
+}
+
+.experience .timeline ol li .details > * {
+    transform: translateY(20px);
+}
+
+/* Enhanced styles to reduce spacing in lists with more specificity */
+.experience .timeline ol li .details ul {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+}
+
+.experience .timeline ol li .details ul li {
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+/* Last list item needs no bottom margin */
+.experience .timeline ol li .details ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Animation styles - ensure high specificity */
+.experience .timeline ol li.in-view .time-wrapper::before {
+    width: 40px;
+}
+
+.experience .timeline ol li.in-view .time-wrapper::after {
+    transition-delay: 0.5s;
+    transform: translateY(-50%) scale(1);
+}
+
+.experience .timeline ol li.in-view time,
+.experience .timeline ol li.in-view .details > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.experience .timeline ol li.in-view time {
+    transition-delay: 0.7s;
+}
+
+.experience .timeline ol li.in-view .details h3 {
+    transition-delay: 0.8s;
+}
+
+.experience .timeline ol li.in-view .details h4 {
+    transition-delay: 0.9s;
+}
+
+.experience .timeline ol li.in-view .details ul {
+    transition-delay: 1s;
+}
+
+/* Just in case there's a conflict with other styles, force visibility */
+.experience .timeline ol li.in-view {
+    opacity: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .experience .timeline ol::before {
+        left: 30px;
+    }
+    
+    .experience .timeline ol li .item-inner {
+        padding-left: 70px;
+    }
+    
+    .experience .timeline ol li .time-wrapper::before {
+        display: none;
+    }
+    
+    .experience .timeline ol li .time-wrapper::after {
+        left: -40px;
+    }
 }
