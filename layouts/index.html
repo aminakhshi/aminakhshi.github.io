@@ -1,14 +1,102 @@
 {{ define "main" }}
-  {{ partial "header.html" . }}
+  {{ partial "navigation.html" . }}
   {{ partial "hero.html" . }}
-  {{ partial "about.html" . }}
-  {{ partial "experience.html" . }}
-  {{ partial "education.html" . }}
-  {{ partial "skills.html" . }}
-  {{ partial "services.html" . }}
-  {{ partial "portfolio.html" . }}
-  {{ partial "publications.html" . }}
-  {{ partial "contact.html" . }}
+  
+  <!-- Resume Snapshot Section -->
+  <section id="resume-snapshot" class="resume-overview">
+    <div class="container">
+      <div class="resume-header" data-aos="fade-up">
+        <h2>Resume Snapshot</h2>
+        <p>A concise tour of my background—dive deeper on each page for full details.</p>
+      </div>
+      <div class="resume-grid" data-aos="fade-up" data-aos-delay="150">
+        <a href="/about" class="resume-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="resume-card-header">
+            <span class="resume-card-icon"><i class="fas fa-user-circle"></i></span>
+            <div>
+              <h3>About</h3>
+              <p>Computational neuroscientist &amp; AI specialist</p>
+            </div>
+          </div>
+          <ul class="resume-highlights">
+            <li>5+ years applying machine learning to biosensing &amp; biomedical data.</li>
+            <li>Bridging research rigor with product-focused innovation.</li>
+          </ul>
+        </a>
+
+        <a href="/experience" class="resume-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="resume-card-header">
+            <span class="resume-card-icon"><i class="fas fa-briefcase"></i></span>
+            <div>
+              <h3>Experience</h3>
+              <p>Multi-disciplinary industry &amp; research roles</p>
+            </div>
+          </div>
+          <ul class="resume-highlights">
+            <li>AI Specialist at Outlier.ai leading instruction-tuned agent workflows.</li>
+            <li>Previous impact across NIH, Google DeepMind, Aerial Technologies, and academia.</li>
+          </ul>
+        </a>
+
+        <a href="/education" class="resume-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="resume-card-header">
+            <span class="resume-card-icon"><i class="fas fa-graduation-cap"></i></span>
+            <div>
+              <h3>Education</h3>
+              <p>Computational neuroscience foundations</p>
+            </div>
+          </div>
+          <ul class="resume-highlights">
+            <li>PhD, Computational Neuroscience, McGill University (2025).</li>
+            <li>Researching network synchronization in sensory neural circuits.</li>
+          </ul>
+        </a>
+
+        <a href="/skills" class="resume-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="resume-card-header">
+            <span class="resume-card-icon"><i class="fas fa-code"></i></span>
+            <div>
+              <h3>Skills</h3>
+              <p>Full-stack data &amp; AI expertise</p>
+            </div>
+          </div>
+          <ul class="resume-highlights">
+            <li>Machine &amp; deep learning, signal processing, MLOps.</li>
+            <li>Python, PyTorch, TensorFlow, cloud (AWS · Azure · GCP).</li>
+          </ul>
+        </a>
+
+        <a href="/portfolio" class="resume-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="resume-card-header">
+            <span class="resume-card-icon"><i class="fas fa-folder-open"></i></span>
+            <div>
+              <h3>Portfolio</h3>
+              <p>Applied research &amp; product builds</p>
+            </div>
+          </div>
+          <ul class="resume-highlights">
+            <li>Projects in biosensor analytics, neural modeling, and intelligent tooling.</li>
+            <li>Focus on interpretable AI and end-to-end delivery.</li>
+          </ul>
+        </a>
+
+        <a href="/publications" class="resume-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="resume-card-header">
+            <span class="resume-card-icon"><i class="fas fa-book"></i></span>
+            <div>
+              <h3>Publications</h3>
+              <p>Peer-reviewed &amp; invited work</p>
+            </div>
+          </div>
+          <ul class="resume-highlights">
+            <li>Research spanning computational neuroscience and biomedical AI.</li>
+            <li>Talks and manuscripts connecting theory with clinical impact.</li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </section>
+  
   {{ partial "footer.html" . }}
   
   <!-- Back to top button -->

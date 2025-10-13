@@ -1,0 +1,249 @@
+/* ===== THEME SYSTEM - Easy Color Customization ===== */
+
+/* 
+   TO CHANGE WEBSITE COLORS:
+   1. Uncomment ONE of the theme options below (remove the surrounding comment marks)
+   2. Save the file
+   3. Refresh your browser
+   
+   OR use the theme selector in the website navigation!
+*/
+
+/* ========================================
+   THEME OPTIONS - Choose One
+   ======================================== */
+
+/* DEFAULT THEME: Royal Blue (Currently Active) */
+:root {
+    --primary-color: #4169E1;
+    --primary-dark: #2E4FA3;
+    --primary-light: #6B8EFF;
+    --accent-color: #6c63ff;
+    --primary-color-rgb: 65, 105, 225;
+}
+
+/* TEAL THEME - Uncomment below to use */
+/*
+:root {
+    --primary-color: #14B8A6;
+    --primary-dark: #0F766E;
+    --primary-light: #2DD4BF;
+    --accent-color: #5EEAD4;
+}
+*/
+
+/* RED THEME - Uncomment below to use */
+/*
+:root {
+    --primary-color: #EF4444;
+    --primary-dark: #B91C1C;
+    --primary-light: #F87171;
+    --accent-color: #FCA5A5;
+}
+*/
+
+/* PURPLE THEME - Uncomment below to use */
+/*
+:root {
+    --primary-color: #A855F7;
+    --primary-dark: #7E22CE;
+    --primary-light: #C084FC;
+    --accent-color: #D8B4FE;
+}
+*/
+
+/* GREEN THEME - Uncomment below to use */
+/*
+:root {
+    --primary-color: #10B981;
+    --primary-dark: #047857;
+    --primary-light: #34D399;
+    --accent-color: #6EE7B7;
+}
+*/
+
+/* ORANGE THEME - Uncomment below to use */
+/*
+:root {
+    --primary-color: #F97316;
+    --primary-dark: #C2410C;
+    --primary-light: #FB923C;
+    --accent-color: #FDBA74;
+}
+*/
+
+/* PINK THEME - Uncomment below to use */
+/*
+:root {
+    --primary-color: #EC4899;
+    --primary-dark: #BE185D;
+    --primary-light: #F472B6;
+    --accent-color: #F9A8D4;
+}
+*/
+
+/* INDIGO THEME - Uncomment below to use */
+/*
+:root {
+    --primary-color: #6366F1;
+    --primary-dark: #4338CA;
+    --primary-light: #818CF8;
+    --accent-color: #A5B4FC;
+}
+*/
+
+/* CYAN THEME - Uncomment below to use */
+/*
+:root {
+    --primary-color: #06B6D4;
+    --primary-dark: #0E7490;
+    --primary-light: #22D3EE;
+    --accent-color: #67E8F9;
+}
+*/
+
+/* AMBER THEME - Uncomment below to use */
+/*
+:root {
+    --primary-color: #F59E0B;
+    --primary-dark: #B45309;
+    --primary-light: #FBBF24;
+    --accent-color: #FCD34D;
+}
+*/
+
+/* ========================================
+   COMMON COLORS (Don't change unless needed)
+   ======================================== */
+:root {
+    --secondary-color: #4a4a4a;
+    --dark-color: #1a1a2e;
+    --light-color: #ecf0f1;
+    --text-color: #333333;
+    --text-light: #7f8c8d;
+    --bg-color: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-dark: #1a1a1a;
+    --border-color: #e0e0e0;
+    --card-bg: #ffffff;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease;
+    --primary-color-rgb: 65, 105, 225;
+
+    /* Spacing System */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    --spacing-xxl: 8rem;
+
+    /* Typography */
+    --font-main: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+
+    /* Layout */
+    --nav-height: 80px;
+    --max-width: 1200px;
+    --border-radius: 12px;
+    --border-radius-lg: 20px;
+}
+
+/* ========================================
+   DYNAMIC THEME DATA ATTRIBUTES
+   These allow JavaScript theme switching
+   ======================================== */
+
+/* Royal Blue Theme */
+[data-theme="blue"] {
+    --primary-color: #4169E1;
+    --primary-dark: #2E4FA3;
+    --primary-light: #6B8EFF;
+    --accent-color: #6c63ff;
+    --primary-color-rgb: 65, 105, 225;
+}
+
+/* Teal Theme */
+[data-theme="teal"] {
+    --primary-color: #14B8A6;
+    --primary-dark: #0F766E;
+    --primary-light: #2DD4BF;
+    --accent-color: #5EEAD4;
+    --primary-color-rgb: 20, 184, 166;
+}
+
+/* Red Theme */
+[data-theme="red"] {
+    --primary-color: #EF4444;
+    --primary-dark: #B91C1C;
+    --primary-light: #F87171;
+    --accent-color: #FCA5A5;
+    --primary-color-rgb: 239, 68, 68;
+}
+
+/* Purple Theme */
+[data-theme="purple"] {
+    --primary-color: #A855F7;
+    --primary-dark: #7E22CE;
+    --primary-light: #C084FC;
+    --accent-color: #D8B4FE;
+    --primary-color-rgb: 168, 85, 247;
+}
+
+/* Green Theme */
+[data-theme="green"] {
+    --primary-color: #10B981;
+    --primary-dark: #047857;
+    --primary-light: #34D399;
+    --accent-color: #6EE7B7;
+    --primary-color-rgb: 16, 185, 129;
+}
+
+/* Orange Theme */
+[data-theme="orange"] {
+    --primary-color: #F97316;
+    --primary-dark: #C2410C;
+    --primary-light: #FB923C;
+    --accent-color: #FDBA74;
+    --primary-color-rgb: 249, 115, 22;
+}
+
+/* Pink Theme */
+[data-theme="pink"] {
+    --primary-color: #EC4899;
+    --primary-dark: #BE185D;
+    --primary-light: #F472B6;
+    --accent-color: #F9A8D4;
+    --primary-color-rgb: 236, 72, 153;
+}
+
+/* Indigo Theme */
+[data-theme="indigo"] {
+    --primary-color: #6366F1;
+    --primary-dark: #4338CA;
+    --primary-light: #818CF8;
+    --accent-color: #A5B4FC;
+    --primary-color-rgb: 99, 102, 241;
+}
+
+/* Cyan Theme */
+[data-theme="cyan"] {
+    --primary-color: #06B6D4;
+    --primary-dark: #0E7490;
+    --primary-light: #22D3EE;
+    --accent-color: #67E8F9;
+    --primary-color-rgb: 6, 182, 212;
+}
+
+/* Amber Theme */
+[data-theme="amber"] {
+    --primary-color: #F59E0B;
+    --primary-dark: #B45309;
+    --primary-light: #FBBF24;
+    --accent-color: #FCD34D;
+    --primary-color-rgb: 245, 158, 11;
+}

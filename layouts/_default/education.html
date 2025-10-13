@@ -1,0 +1,11 @@
+{{ define "main" }}
+  {{ partial "navigation.html" . }}
+  <main class="single-page">
+    {{ partial "education.html" . }}
+  </main>
+  {{ partial "footer.html" . }}
+  
+  <a href="#top" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+  </a>
+{{ end }}
