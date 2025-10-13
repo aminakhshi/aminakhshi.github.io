@@ -158,32 +158,6 @@ body.dark-mode .section-header h2 {
     margin-top: var(--spacing-md);
 }
 
-/* ===== Custom Cursor ===== */
-.cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--primary-color);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    transition: var(--transition-fast);
-    opacity: 0.7;
-    mix-blend-mode: difference;
-}
-
-.cursor.expand {
-    transform: translate(-50%, -50%) scale(2);
-    opacity: 0;
-}
-
-@media (max-width: 768px) {
-    .cursor {
-        display: none;
-    }
-}
-
 /* ===== Navigation ===== */
 .navigation {
     position: fixed;
@@ -590,12 +564,14 @@ body.dark-mode .resume-header p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
+    perspective: 1000px;
+    padding: var(--spacing-lg) 0;
 }
 
 .resume-card {
     background: var(--card-bg);
     border-radius: var(--border-radius-lg);
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
     padding: var(--spacing-lg);
     border: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
@@ -603,9 +579,35 @@ body.dark-mode .resume-header p {
     gap: var(--spacing-md);
     position: relative;
     overflow: hidden;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-decoration: none;
     color: inherit;
+    transform-style: preserve-3d;
+}
+
+/* Tilted Window Effect - Each card gets a unique rotation */
+.resume-card:nth-child(1) {
+    transform: rotate(-2deg) translateY(-5px);
+}
+
+.resume-card:nth-child(2) {
+    transform: rotate(1.5deg) translateY(5px);
+}
+
+.resume-card:nth-child(3) {
+    transform: rotate(-1deg) translateY(-3px);
+}
+
+.resume-card:nth-child(4) {
+    transform: rotate(2deg) translateY(7px);
+}
+
+.resume-card:nth-child(5) {
+    transform: rotate(-1.5deg) translateY(-7px);
+}
+
+.resume-card:nth-child(6) {
+    transform: rotate(1deg) translateY(3px);
 }
 
 .resume-card::before {
@@ -619,29 +621,46 @@ body.dark-mode .resume-header p {
     z-index: 1;
 }
 
-body.dark-mode .resume-card {
-    border-color: rgba(255, 255, 255, 0.08);
-}
-
+/* Add decorative "pin" elements for the tilted window effect */
 .resume-card::after {
     content: '';
     position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: linear-gradient(135deg, var(--primary-color) 0%, transparent 60%);
-    opacity: 0;
-    transition: var(--transition);
-    z-index: 0;
+    top: 20px;
+    right: 20px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+/* Gradient overlay for depth */
+.resume-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+body.dark-mode .resume-card {
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .resume-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--box-shadow-hover);
+    transform: rotate(0deg) translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 10px 25px rgba(0, 0, 0, 0.1);
     border-color: rgba(0, 0, 0, 0.08);
+    z-index: 10;
+}
+
+body.dark-mode .resume-card:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .resume-card:hover::after {
-    opacity: 0.08;
+    transform: scale(1.2);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(255, 255, 255, 0.4);
 }
 
 .resume-card-header {
@@ -728,6 +747,12 @@ body.dark-mode .resume-highlights li {
 
     .resume-card {
         padding: var(--spacing-md);
+        /* Remove tilt on mobile for better readability */
+        transform: none !important;
+    }
+
+    .resume-card:hover {
+        transform: translateY(-8px) scale(1.02) !important;
     }
 
     .resume-card-icon {
@@ -1324,7 +1349,8 @@ body.dark-mode .skill-category h3 {
     transform: translateY(-2px);
 }
 
-/* ===== Portfolio Section ===== */
+/* ===== Projects Section ===== */
+.projects,
 .portfolio {
     background-color: var(--bg-light);
 }

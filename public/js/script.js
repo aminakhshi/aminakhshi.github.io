@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initThemeToggle(); // Load theme first
     initAOS();
     initTyped();
-    initCursor();
     initNavigation();
     initSmoothScroll();
     initBackToTop();
@@ -190,29 +189,6 @@ function initParticles() {
     } catch (error) {
         console.error('Error initializing particles:', error);
     }
-}
-
-// ===== Custom Cursor =====
-function initCursor() {
-    const cursor = document.querySelector('.cursor');
-    if (!cursor || window.innerWidth <= 768) return;
-    
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.top = `${e.pageY}px`;
-        cursor.style.left = `${e.pageX}px`;
-    });
-    
-    document.addEventListener('click', () => {
-        cursor.classList.add('expand');
-        setTimeout(() => cursor.classList.remove('expand'), 500);
-    });
-
-    // Add cursor effect on interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .btn, .filter-btn, .portfolio-item');
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.style.transform = 'translate(-50%, -50%) scale(1.5)');
-        el.addEventListener('mouseleave', () => cursor.style.transform = 'translate(-50%, -50%) scale(1)');
-    });
 }
 
 // ===== Navigation =====
