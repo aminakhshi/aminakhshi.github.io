@@ -1,5 +1,10 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://aminakhshi.github.io/'
 languageCode = 'en-us'
-title = 'Amin Akhshi'
+title = 'Amin Akhshi - AI/ML Solution Architect and ML Engineer'
 theme = "bootstrap-theme"
+
+[params]
+  description = "Personal website of Amin Akhshi - AI/ML Solution Architect and ML Engineer"
+  author = "Amin Akhshi"
+
 

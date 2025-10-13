@@ -1,5 +1,9 @@
 # Hugo related
 .hugo_build.lock
+homepage_tree.md
+script-old.js
+styles-old.css
+styles-backup.css
 
 # OS generated files
 .DS_Store
